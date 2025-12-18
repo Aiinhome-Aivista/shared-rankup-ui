@@ -9,10 +9,13 @@
     "react": "^18.0.0"
   },
   "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
     "tsup": "^6.7.0",
     "typescript": "^5.9.3"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts"
+    "build": "tsup src/index.ts --format esm,cjs --dts" ,
+  "dev": "tsup --watch"
   }
 }

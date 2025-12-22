@@ -65,7 +65,7 @@ export const darkTheme: Theme = {
         default: palette.green[400],
         hover: palette.green[500],
         active: palette.green[600],
-        disabled: palette.green[950],
+        disabled: palette.green[900],
       },
       secondary: {
         default: palette.green[800],

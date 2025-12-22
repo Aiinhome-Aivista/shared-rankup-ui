@@ -6,12 +6,29 @@ export type Theme = {
     bg: {
       default: string;
       card: string;
+      calenderHolidayBg: string;
+      calendernormaltextBg: string;
+      notificationBg: string;
+      sidebarBg: string;
+      barchartbarfillBg: string;
+      radialChartBg: string;
+      buttonBg: string;
+      notificationTextPrimaryBg: string;
+      notificationTextSecondaryBg: string;
+      announcementSectionBg: string;
+      upcomingSectionSmallCardBg: string;
+      aiassistanceSectionCardBg: string;
     };
     text: {
       default: string;
       muted: string;
       inverse: string;
       onPrimary: string;
+      calenderHolidayText: string;
+      calenderText: string;
+      primary: string;
+      notificationiconText: string;
+      sidebaricontext: string;
     };
     action: {
       primary: {
@@ -28,8 +45,15 @@ export type Theme = {
     };
     border: {
       default: string;
+      primary: string;
+      secondary: string;
       subtle: string;
       focus: string;
+    };
+    shadow: {
+      default: string;
+      primary: string;
+      innershadow: string;
     };
     status: {
       error: {

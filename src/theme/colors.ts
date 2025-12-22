@@ -1,18 +1,21 @@
 export const palette = {
   common: {
     white: "#FFFFFF",
-    black: "#000000",
-    blue:  "#514CF1",
+    red: "#F21D2F",
+    black_primary: "#000000",
+    black_secondary: "#262626",
+    blue_primary:  "#514CF1",
+    blue_secondary:"#7E8FF2",
+    blue_tertiary: "#A2AEF2",
+    green:"#142210"
   },
   purple: {
     50:  "#EBEBFF",
     100: "#D6D6FF",
     150: "#C2C2FF", 
     200: "#B4B4E6",
-    300: "#A2AEF2",
-    350: "#A1AEF2",
+    300: "#A1AEF2",
     400: "#A1AEF2B2",
-    450: "#7E8FF2",
     500: "#797CF1",
     550: "#5B58F3",
     600: "#4845C9",
@@ -22,19 +25,25 @@ export const palette = {
     800: "#514CF133",
     850: "#514CF11A", 
     900: "#514CF103",
+    950: "#514CF10D"
   },
   green: {
-    200: "#4ADE80", 
-    300: "#22C55E",
-    400: "#16A34A",
-    500: "#48F113",
-    550: "#1E3923",
-    600: "#142210", // Bg Default
-    700: "#1C2E18", // Surface
-    750: "#253820", // Subtle
-    800: "#2C4226",
-    850: "#1C2E17",
-    900: "#142210", // Disabled
+    100: "#4ADE80", 
+    200: "#22C55E",
+    300: "#16A34A",
+    400: "#48F113",
+    500: "#2C4226",
+    550: "#253820", // Subtle
+    600: "#1E3923",
+    650: "#48F11333",
+    700: "#1C2E18",
+    750: "#1C2E17",
+    800: "#48F1130D",
+    850: "#1C1B1F1A",
+    900: "#142210", 
+   
+   
+  
     
     // Status Success
     success: "#10B981",
@@ -43,7 +52,7 @@ export const palette = {
   },
   red: {
     500: "#EF4444",
-    600: "#F21D2F", // Error Default
+    800: "#F21D2F1A",
     50:  "#FEF2F2",   // Error Bg Light
     900: "#451A1A",  // Error Bg Dark
   },
@@ -67,7 +76,6 @@ export const palette = {
     900: "#1B1B3A", // Text Default Light
   },
   black:{
-    500:"#262626",
     600:"#1C1B1F",
     700:"#00000040",
   },

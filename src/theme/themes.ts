@@ -5,7 +5,7 @@ export const lightTheme: Theme = {
   colors: {
     bg: {
       default: palette.common.white,
-      card: palette.green[850],
+      card: palette.neutral[850],
       calenderHolidayBg: palette.common.red[800],
       calendernormaltextBg: palette.neutral[850],
       notificationBg: palette.neutral[300],

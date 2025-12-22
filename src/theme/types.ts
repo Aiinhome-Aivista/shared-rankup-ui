@@ -5,9 +5,7 @@ export type Theme = {
   colors: {
     bg: {
       default: string;
-      surface: string;
-      subtle: string;
-      muted: string;
+      card: string;
     };
     text: {
       default: string;

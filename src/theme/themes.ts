@@ -4,10 +4,8 @@ import { palette } from "./colors";
 export const lightTheme: Theme = {
   colors: {
     bg: {
-      default: palette.neutral[50],
-      surface: palette.common.white,
-      subtle: palette.neutral[100],
-      muted: palette.neutral[300],
+      default: palette.common.white,
+      card: palette.neutral[850],
     },
     text: {
       default: palette.neutral[900],
@@ -50,9 +48,7 @@ export const darkTheme: Theme = {
   colors: {
     bg: {
       default: palette.green[900],
-      surface: palette.green[850],
-      subtle: palette.green[800],
-      muted: palette.green[700],
+      card: palette.green[850],
     },
     text: {
       default: palette.common.white,

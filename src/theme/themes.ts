@@ -138,6 +138,4 @@ export const darkTheme: Theme = {
   }
 };
 
-export const customTheme = {
- 
-};
+export const customTheme: Theme = lightTheme;

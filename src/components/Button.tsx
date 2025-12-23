@@ -1,5 +1,5 @@
 // src/Button.tsx
-import { useTheme } from "./theme/ThemeProvider";
+import { useTheme } from "../theme/ThemeProvider";
 import type { ReactNode } from "react";
 
 export type ButtonProps = {
@@ -18,8 +18,8 @@ export const Button = ({ children, onClick, color = "primary" }: ButtonProps) =>
         padding: "10px 16px",
         borderRadius: 8,
         border: "none",
-        background: theme.colors[color],
-        color: theme.colors.text,
+        background: theme.colors.bg.buttonBg,
+        color: theme.colors.text.default,
         cursor: "pointer"
       }}
     >

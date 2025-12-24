@@ -17,6 +17,7 @@ export type CalendarProps = {
   selectedTextColor?: string;
   iconColor?: string;
   iconSize?: number;
+  headerFontSize?: string | number;
 };
 
 export const Calendar = ({
@@ -33,12 +34,13 @@ export const Calendar = ({
   selectedTextColor,
   iconColor,
   iconSize = 18,
+  headerFontSize = "15px",
 }: CalendarProps) => {
   const { theme } = useTheme();
 
   // viewDate controls which month is being displayed
   const [viewDate, setViewDate] = useState(initialDate);
-  // selectedDate tracks the specific day highlighted in blue
+  // selectedDate tracks the specific day 
   const [selectedDate, setSelectedDate] = useState(initialDate);
 
   const year = viewDate.getFullYear();
@@ -89,7 +91,6 @@ export const Calendar = ({
         borderRadius: "16px",
         display: "flex",
         flexDirection: "column",
-        boxSizing: "border-box",
 
       }}
     >
@@ -103,24 +104,28 @@ export const Calendar = ({
         <span style={{
           color: textColor || theme.colors.text.default,
           fontWeight: 700,
-          fontSize: "18px"
+          fontSize: headerFontSize,
         }}>
           {monthName} {year}
         </span>
         <div style={{ display: "flex", gap: "15px", alignItems: "center" }}>
           <div onClick={handlePrevMonth} style={{ cursor: "pointer", display: "flex" }}>
-            <ArrowBack
-              width={iconSize}
-              height={iconSize}
-              color={iconColor || theme.colors.text.primary}
-            />
+            <div style={{ pointerEvents: "none", display: "flex" }}>
+              <ArrowBack
+                width={iconSize}
+                height={iconSize}
+                color={iconColor || theme.colors.text.primary}
+              />
+            </div>
           </div>
           <div onClick={handleNextMonth} style={{ cursor: "pointer", display: "flex" }}>
-            <ArrowForward
-              width={iconSize}
-              height={iconSize}
-              color={iconColor || theme.colors.text.primary}
-            />
+            <div style={{ pointerEvents: "none", display: "flex" }}>
+              <ArrowForward
+                width={iconSize}
+                height={iconSize}
+                color={iconColor || theme.colors.text.primary}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -172,9 +177,8 @@ export const Calendar = ({
                 justifyContent: "center",
                 borderRadius: "8px",
                 cursor: "pointer",
-                fontSize: "14px",
+                fontSize: "12px",
                 fontWeight: 500,
-                transition: "background-color 0.2s, color 0.2s",
                 backgroundColor: dayBg,
                 color: dayColor,
               }}

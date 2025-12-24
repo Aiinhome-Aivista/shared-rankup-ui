@@ -32,7 +32,7 @@ export const Star = ({
         width={width}
         height={height}
       >
-        <rect width="18" height="18" fill={iconColor} />
+        <rect width={width} height={height} fill={iconColor} />
       </mask>
       <g mask="url(#mask0_421_635)">
         <path

@@ -1,7 +1,7 @@
 import React, { useState, ReactNode } from "react";
 import { useTheme } from "../theme/ThemeProvider";
-import { ArrowBack } from "./icons/ArrowBack";
-import { ArrowForward } from "./icons/ArrowForward";
+import { ArrowBack } from "../icons/ArrowBack";
+import { ArrowForward } from "../icons/ArrowForward";
 
 export type CalendarProps = {
   children?: ReactNode;
@@ -40,7 +40,7 @@ export const Calendar = ({
 
   // viewDate controls which month is being displayed
   const [viewDate, setViewDate] = useState(initialDate);
-  // selectedDate tracks the specific day 
+  // selectedDate tracks the specific day
   const [selectedDate, setSelectedDate] = useState(initialDate);
 
   const year = viewDate.getFullYear();
@@ -91,25 +91,31 @@ export const Calendar = ({
         borderRadius: "16px",
         display: "flex",
         flexDirection: "column",
-
       }}
     >
       {/* Header with Navigation Arrows */}
-      <div style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        marginBottom: "20px"
-      }}>
-        <span style={{
-          color: textColor || theme.colors.text.default,
-          fontWeight: 700,
-          fontSize: headerFontSize,
-        }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginBottom: "20px",
+        }}
+      >
+        <span
+          style={{
+            color: textColor || theme.colors.text.default,
+            fontWeight: 700,
+            fontSize: headerFontSize,
+          }}
+        >
           {monthName} {year}
         </span>
         <div style={{ display: "flex", gap: "15px", alignItems: "center" }}>
-          <div onClick={handlePrevMonth} style={{ cursor: "pointer", display: "flex" }}>
+          <div
+            onClick={handlePrevMonth}
+            style={{ cursor: "pointer", display: "flex" }}
+          >
             <div style={{ pointerEvents: "none", display: "flex" }}>
               <ArrowBack
                 width={iconSize}
@@ -118,7 +124,10 @@ export const Calendar = ({
               />
             </div>
           </div>
-          <div onClick={handleNextMonth} style={{ cursor: "pointer", display: "flex" }}>
+          <div
+            onClick={handleNextMonth}
+            style={{ cursor: "pointer", display: "flex" }}
+          >
             <div style={{ pointerEvents: "none", display: "flex" }}>
               <ArrowForward
                 width={iconSize}
@@ -130,23 +139,37 @@ export const Calendar = ({
         </div>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", gap: "10px" }}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(7, 1fr)",
+          gap: "10px",
+        }}
+      >
         {/* Weekday Labels */}
         {dayLabels.map((label, i) => (
-          <div key={i} style={{
-            textAlign: "center",
-            fontSize: "12px",
-            fontWeight: 600,
-            // Sunday (index 6) gets the holiday color
-            color: i === 6 ? (holidayTextColor || theme.colors.text.calenderHolidayText) : theme.colors.text.muted,
-            paddingBottom: "8px"
-          }}>
+          <div
+            key={i}
+            style={{
+              textAlign: "center",
+              fontSize: "12px",
+              fontWeight: 600,
+              // Sunday (index 6) gets the holiday color
+              color:
+                i === 6
+                  ? holidayTextColor || theme.colors.text.calenderHolidayText
+                  : theme.colors.text.muted,
+              paddingBottom: "8px",
+            }}
+          >
             {label}
           </div>
         ))}
 
         {/* Empty slots for month alignment */}
-        {paddingSlots.map((i) => <div key={`pad-${i}`} />)}
+        {paddingSlots.map((i) => (
+          <div key={`pad-${i}`} />
+        ))}
 
         {/* Calendar Days */}
         {daysArray.map((day) => {
@@ -155,16 +178,16 @@ export const Calendar = ({
           const isSelected = isSameDay(day);
 
           const dayBg = isSelected
-            ? (selectedBgColor || theme.colors.bg.buttonBg)
+            ? selectedBgColor || theme.colors.bg.buttonBg
             : isSunday
-              ? (holidayBgColor || theme.colors.bg.calenderHolidayBg)
-              : theme.colors.bg.calendernormaltextBg;
+            ? holidayBgColor || theme.colors.bg.calenderHolidayBg
+            : theme.colors.bg.calendernormaltextBg;
 
           const dayColor = isSelected
-            ? (selectedTextColor || theme.colors.text.onPrimary)
+            ? selectedTextColor || theme.colors.text.onPrimary
             : isSunday
-              ? (holidayTextColor || theme.colors.text.calenderHolidayText)
-              : (textColor || theme.colors.text.calenderText);
+            ? holidayTextColor || theme.colors.text.calenderHolidayText
+            : textColor || theme.colors.text.calenderText;
 
           return (
             <div

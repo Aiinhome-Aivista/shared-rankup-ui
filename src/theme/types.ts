@@ -55,6 +55,9 @@ export type Theme = {
       primary: string;
       innershadow: string;
     };
+    hover: {
+      default: string;
+    };
     status: {
       error: {
         default: string;

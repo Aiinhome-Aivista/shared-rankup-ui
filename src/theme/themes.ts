@@ -56,6 +56,9 @@ export const lightTheme: Theme = {
       primary: palette.black[700],
       innershadow: palette.neutral[650],
     },
+    hover:{
+      default:palette.neutral[150],
+    },
     status: {
       error: {
         default: palette.red[500],
@@ -118,6 +121,9 @@ export const darkTheme: Theme = {
       secondary: palette.green[800],
       subtle: palette.green[700],
       focus: palette.green[400],
+    },
+    hover:{
+      default:palette.green[700],
     },
     shadow:{
       default:palette.common.black_secondary,

@@ -59,6 +59,7 @@ export const palette = {
   neutral: {
     50:  "#F5F6FA", // Bg Light Default
     100: "#F0F2F5",
+    150: "#FCFBFF",
     200: "#E5E7EB",
     250: "#E1E4EA",
     300: "#D9D9D9",

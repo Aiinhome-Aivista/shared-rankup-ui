@@ -1,6 +1,6 @@
 import React, { useState, ReactNode } from "react";
 import { useTheme } from "../theme/ThemeProvider";
-import { ArrowBack } from "../icons/ArrowBack";
+import { ArrowBackward } from "../icons/ArrowBackward";
 import { ArrowForward } from "../icons/ArrowForward";
 
 export type CalendarProps = {
@@ -117,7 +117,7 @@ export const Calendar = ({
             style={{ cursor: "pointer", display: "flex" }}
           >
             <div style={{ pointerEvents: "none", display: "flex" }}>
-              <ArrowBack
+              <ArrowBackward
                 width={iconSize}
                 height={iconSize}
                 color={iconColor || theme.colors.text.primary}

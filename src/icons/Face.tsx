@@ -1,20 +1,16 @@
+import { IconTypes } from "../types/iconTypes";
 import { useTheme } from "../theme/ThemeProvider";
-
-export type FaceIconProps = {
-  width?: number | string;
-  height?: number | string;
-  color?: string;
-  onClick?: () => void;
-};
 
 export const Face = ({
   width = 15,
   height = 15,
   color,
   onClick,
-}: FaceIconProps) => {
+  className,
+  style,
+}: IconTypes) => {
   const { theme } = useTheme();
-  const iconColor = color || theme.colors.text.default;
+  const iconColor = color ? String(color) : theme.colors.text.default;
   return (
     <svg
       width={width}
@@ -22,10 +18,12 @@ export const Face = ({
       viewBox="0 0 18 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      onClick={onClick}
+      className={className}
+      style={{ cursor: onClick ? "pointer" : "default", ...style }}
     >
       <mask
         id="mask0_219_178"
-        style={{ cursor: onClick ? "pointer" : "default" }}
         maskUnits="userSpaceOnUse"
         x="0"
         y="0"

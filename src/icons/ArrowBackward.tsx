@@ -26,20 +26,7 @@ export const ArrowBackward = ({
       className={className}
       style={{ cursor: onClick ? "pointer" : "default", ...style }}
     >
-      <mask
-        id="icon_mask"
-        style={{ maskType: "alpha" }}
-        maskUnits="userSpaceOnUse"
-        x="0"
-        y="0"
-        width={width}
-        height={height}
-      >
-        <rect width={width} height={height} fill={iconColor} />
-      </mask>
-      <g mask="url(#icon_mask)">
-        <path d={leftPath} fill={iconColor} />
-      </g>
+      <path d={leftPath} fill={iconColor} />
     </svg>
   );
 };

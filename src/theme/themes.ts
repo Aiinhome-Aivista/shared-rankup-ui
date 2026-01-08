@@ -4,36 +4,31 @@ import { palette } from "./colors";
 export const lightTheme: Theme = {
   colors: {
     bg: {
-      default: palette.common.white,
-      card: palette.neutral[850],
-      calenderHolidayBg: palette.common.red[800],
-      calendernormaltextBg: palette.neutral[850],
-      notificationBg: palette.neutral[300],
-      notificationTextPrimaryBg: palette.common.red,
-      notificationTextSecondaryBg: palette.yellow[300],
-      sidebarBg: palette.common.blue_primary,
-      barchartbarfillBg: palette.common.blue_primary,
-      radialChartBg: palette.neutral[450],
-      buttonBg: palette.common.blue_primary,
-      announcementSectionBg: palette.purple[950],
-      upcomingSectionSmallCardBg: palette.neutral[800],
-      aiassistanceSectionCardBg: palette.purple[900],
-
+      primary: palette.common.white,
+      secondary: palette.neutral[50], // Generic secondary bg
+      sidebar: palette.common.blue_primary,
+      surface: {
+        primary: palette.neutral[850], // card
+        secondary: palette.neutral[800], // upcomingSectionSmallCardBg
+        tertiary: palette.neutral[300], // notificationBg
+        brand: palette.purple[900], // aiassistanceSectionCardBg
+        brandSecondary: palette.purple[950], // announcementSectionBg
+        neutral: palette.neutral[850], // calendernormaltextBg
+      },
     },
     text: {
-      default: palette.common.blue_primary,
-      muted: palette.common.blue_tertiary,
+      primary: palette.purple[300], // primary text
+      secondary: palette.common.blue_tertiary, // muted
       inverse: palette.purple[400],
-      primary: palette.purple[300],
-      sidebaricontext: palette.purple[500],
       onPrimary: palette.common.white,
-      calenderText: palette.purple[300],
-      notificationiconText: palette.common.black_secondary,
-      calenderHolidayText: palette.common.red,
+      brand: {
+        primary: palette.common.blue_primary, // default text was blue_primary
+        secondary: palette.purple[500], // sidebaricontext
+      },
     },
     action: {
       primary: {
-        default: palette.purple[500],
+        default: palette.common.blue_primary, // buttonBg
         hover: palette.purple[600],
         active: palette.purple[700],
         disabled: palette.purple[300],
@@ -51,60 +46,63 @@ export const lightTheme: Theme = {
       subtle: palette.neutral[300],
       focus: palette.common.blue_tertiary,
     },
-    shadow:{
-      default:palette.purple[650],
+    shadow: {
+      default: palette.purple[650],
       primary: palette.black[700],
       innershadow: palette.neutral[650],
     },
-    hover:{
-      default:palette.neutral[150],
+    hover: {
+      default: palette.neutral[150],
     },
     status: {
       error: {
-        default: palette.red[500],
-        bg: palette.red[50],
+        default: palette.common.red, // notificationTextPrimaryBg
+        bg: palette.common.red[800], // calenderHolidayBg
+        subtle: palette.common.red, // calenderHolidayText
       },
       success: {
         default: palette.green.success,
         bg: palette.green.successBg,
       },
-    }
-  }
+      warning: {
+        default: palette.yellow[300], // notificationTextSecondaryBg
+      },
+    },
+    viz: {
+      primary: palette.common.blue_primary, // barchartbarfillBg
+      secondary: palette.neutral[450], // radialChartBg
+    },
+  },
 };
 
 export const darkTheme: Theme = {
   colors: {
     bg: {
-      default: palette.common.green,
-      card: palette.green[850],
-      calenderHolidayBg: palette.red[800],
-      calendernormaltextBg: palette.green[900],
-      notificationBg: palette.green[850],
-      sidebarBg: palette.green[900],
-      barchartbarfillBg: palette.green[500],
-      radialChartBg: palette.green[850],
-      buttonBg: palette.green[600],
-      notificationTextPrimaryBg: palette.common.red,
-      notificationTextSecondaryBg: palette.yellow[300],
-      announcementSectionBg: palette.green[900],
-      upcomingSectionSmallCardBg: palette.green[850],
-      aiassistanceSectionCardBg: palette.green[900],
+      primary: palette.common.green,
+      secondary: palette.common.green, // Adjust if needed
+      sidebar: palette.green[900],
+      surface: {
+        primary: palette.green[850], // card
+        secondary: palette.green[850], // upcomingSectionSmallCardBg (same as card in dark?)
+        tertiary: palette.green[850], // notificationBg
+        brand: palette.green[900], // aiassistance
+        brandSecondary: palette.green[900], // announcement
+        neutral: palette.green[900], // calendernormaltextBg
+      },
     },
     text: {
-      default: palette.common.white,
-      muted: palette.green[500],
-      inverse: palette.common.white,
       primary: palette.common.white,
-      notificationiconText: palette.green[400],
+      secondary: palette.green[500],
+      inverse: palette.common.white,
       onPrimary: palette.common.green,
-      calenderHolidayText: palette.common.red,
-      calenderText: palette.common.white,
-      sidebaricontext: palette.neutral[300],
-     
+      brand: {
+        primary: palette.common.white, // default
+        secondary: palette.neutral[300], // sidebaricontext
+      },
     },
     action: {
       primary: {
-        default: palette.green[400],
+        default: palette.green[600], // buttonBg
         hover: palette.green[500],
         active: palette.green[600],
         disabled: palette.green[900],
@@ -122,26 +120,33 @@ export const darkTheme: Theme = {
       subtle: palette.green[700],
       focus: palette.green[400],
     },
-    hover:{
-      default:palette.green[700],
-    },
-    shadow:{
-      default:palette.common.black_secondary,
+    shadow: {
+      default: palette.common.black_secondary,
       primary: palette.common.black_secondary,
       innershadow: palette.common.black_secondary,
-
+    },
+    hover: {
+      default: palette.green[700],
     },
     status: {
       error: {
-        default: palette.red[500],
-        bg: palette.red[900],
+        default: palette.common.red,
+        bg: palette.red[800],
+        subtle: palette.common.red,
       },
       success: {
         default: palette.green[400],
         bg: palette.green.successBgDark,
       },
-    }
-  }
+      warning: {
+        default: palette.yellow[300],
+      },
+    },
+    viz: {
+      primary: palette.green[500],
+      secondary: palette.green[850],
+    },
+  },
 };
 
 export const customTheme: Theme = lightTheme;

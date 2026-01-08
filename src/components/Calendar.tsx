@@ -86,7 +86,7 @@ export const Calendar = ({
       style={{
         width: width,
         height: height,
-        backgroundColor: backgroundColor || theme.colors.bg.default,
+        backgroundColor: backgroundColor || theme.colors.bg.primary,
         padding: "24px",
         borderRadius: "16px",
         display: "flex",
@@ -104,7 +104,7 @@ export const Calendar = ({
       >
         <span
           style={{
-            color: textColor || theme.colors.text.default,
+            color: textColor || theme.colors.text.brand.primary,
             fontWeight: 700,
             fontSize: headerFontSize,
           }}
@@ -157,8 +157,8 @@ export const Calendar = ({
               // Sunday (index 6) gets the holiday color
               color:
                 i === 6
-                  ? holidayTextColor || theme.colors.text.calenderHolidayText
-                  : theme.colors.text.muted,
+                  ? holidayTextColor || theme.colors.status.error.subtle
+                  : theme.colors.text.secondary,
               paddingBottom: "8px",
             }}
           >
@@ -178,16 +178,16 @@ export const Calendar = ({
           const isSelected = isSameDay(day);
 
           const dayBg = isSelected
-            ? selectedBgColor || theme.colors.bg.buttonBg
+            ? selectedBgColor || theme.colors.action.primary.default
             : isSunday
-            ? holidayBgColor || theme.colors.bg.calenderHolidayBg
-            : theme.colors.bg.calendernormaltextBg;
+            ? holidayBgColor || theme.colors.status.error.bg
+            : theme.colors.bg.surface.neutral;
 
           const dayColor = isSelected
             ? selectedTextColor || theme.colors.text.onPrimary
             : isSunday
-            ? holidayTextColor || theme.colors.text.calenderHolidayText
-            : textColor || theme.colors.text.calenderText;
+            ? holidayTextColor || theme.colors.status.error.subtle
+            : textColor || theme.colors.text.primary;
 
           return (
             <div

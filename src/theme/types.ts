@@ -1,34 +1,29 @@
-// src/theme/types.ts
 export type ThemeMode = "light" | "dark" | "custom";
 
 export type Theme = {
   colors: {
     bg: {
-      default: string;
-      card: string;
-      calenderHolidayBg: string;
-      calendernormaltextBg: string;
-      notificationBg: string;
-      sidebarBg: string;
-      barchartbarfillBg: string;
-      radialChartBg: string;
-      buttonBg: string;
-      notificationTextPrimaryBg: string;
-      notificationTextSecondaryBg: string;
-      announcementSectionBg: string;
-      upcomingSectionSmallCardBg: string;
-      aiassistanceSectionCardBg: string;
+      primary: string;
+      secondary: string;
+      sidebar: string;
+      surface: {
+        primary: string;
+        secondary: string;
+        tertiary: string; // for notifications
+        brand: string; // for brand colored surfaces like ai/announcement
+        brandSecondary: string;
+        neutral: string;
+      };
     };
     text: {
-      default: string;
-      muted: string;
+      primary: string;
+      secondary: string;
       inverse: string;
       onPrimary: string;
-      calenderHolidayText: string;
-      calenderText: string;
-      primary: string;
-      notificationiconText: string;
-      sidebaricontext: string;
+      brand: {
+        primary: string;
+        secondary: string;
+      };
     };
     action: {
       primary: {
@@ -62,11 +57,19 @@ export type Theme = {
       error: {
         default: string;
         bg: string;
+        subtle: string; // Text on bg
       };
       success: {
         default: string;
         bg: string;
       };
+      warning: {
+        default: string;
+      };
+    };
+    viz: {
+      primary: string; // charts
+      secondary: string; // charts
     };
   };
-}
+};

@@ -10,7 +10,7 @@ export const Face = ({
   style,
 }: IconTypes) => {
   const { theme } = useTheme();
-  const iconColor = color ? String(color) : theme.colors.text.default;
+  const iconColor = color ? String(color) : theme.colors.text.brand.primary;
   return (
     <svg
       width={width}

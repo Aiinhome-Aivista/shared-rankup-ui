@@ -76,7 +76,7 @@ export const darkTheme: Theme = {
   colors: {
     bg: {
       default: palette.common.green,
-      card: palette.green[850],
+      card: palette.green[750],
       calenderHolidayBg: palette.red[800],
       calendernormaltextBg: palette.green[900],
       notificationBg: palette.green[850],

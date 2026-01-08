@@ -23,7 +23,7 @@ export type CalendarProps = {
 export const Calendar = ({
   width = 350,
   children,
-  height = "auto",
+  height ='auto',
   initialDate = new Date(),
   onDateSelect,
   backgroundColor,

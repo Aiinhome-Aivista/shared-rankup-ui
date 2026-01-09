@@ -4,9 +4,15 @@ import { palette } from "./colors";
 export const lightTheme: Theme = {
   colors: {
     bg: {
-      primary: palette.common.white, 
+      primary: palette.common.white,
+      primaryDimmed: palette.common.whiteSmoke,
+      primaryDimmed25: palette.transparentWhite[25],
       secondary: palette.neutral[50], // Generic secondary bg
       sidebar: palette.common.blue_primary,
+      button: {
+        secondary: palette.green[800],
+        tertiary: palette.common.green_primary, // notificationBg
+      },
       surface: {
         primary: palette.neutral[850], // card
         secondary: palette.neutral[800], // upcomingSectionSmallCardBg
@@ -14,6 +20,7 @@ export const lightTheme: Theme = {
         brand: palette.purple[900], // aiassistanceSectionCardBg
         brandSecondary: palette.purple[950], // announcementSectionBg
         neutral: palette.neutral[850], // calendernormaltextBg
+        warning: palette.yellow[800],
       },
     },
     text: {
@@ -21,7 +28,9 @@ export const lightTheme: Theme = {
       secondary: palette.common.blue_tertiary, // muted
       subtle: palette.purple[300], // was primary
       inverse: palette.purple[400],
-      onPrimary: palette.common.white,
+      inverseSecondary: palette.yellow[800],
+      onPrimary: palette.common.white, // buttonText
+      tertiary: palette.common.green_primary, // notificationTextPrimaryBg
       brand: {
         secondary: palette.purple[500], // sidebaricontext
       },
@@ -81,6 +90,10 @@ export const darkTheme: Theme = {
       primary: palette.common.green,
       secondary: palette.common.green, // Adjust if needed
       sidebar: palette.green[900],
+      button: {
+        secondary: palette.neutral[800], // upcomingSectionSmallCardBg
+        tertiary: palette.green[850], // notificationBg
+      },
       surface: {
         primary: palette.green[850], // card
         secondary: palette.green[850], // upcomingSectionSmallCardBg (same as card in dark?)
@@ -96,6 +109,7 @@ export const darkTheme: Theme = {
       subtle: palette.common.white, // was primary
       inverse: palette.common.white,
       onPrimary: palette.common.green,
+      tertiary: palette.common.green_primary,
       brand: {
         secondary: palette.neutral[300], // sidebaricontext
       },

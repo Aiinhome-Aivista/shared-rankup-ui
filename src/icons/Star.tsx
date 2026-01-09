@@ -10,7 +10,7 @@ export const Star = ({
   style,
 }: IconTypes) => {
   const { theme } = useTheme();
-  const iconColor = color ? String(color) : theme.colors.text.brand.primary;
+  const iconColor = color ? String(color) : theme.colors.text.primary;
   return (
     <svg
       width={width}

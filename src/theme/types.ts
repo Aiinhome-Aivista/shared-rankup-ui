@@ -18,10 +18,10 @@ export type Theme = {
     text: {
       primary: string;
       secondary: string;
+      subtle: string;
       inverse: string;
       onPrimary: string;
       brand: {
-        primary: string;
         secondary: string;
       };
     };

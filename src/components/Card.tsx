@@ -18,7 +18,7 @@ export const Card = ({ children }: { children: ReactNode , height?: string, widt
         borderRadius: 10,
         boxShadow: "0 10px 20px rgba(0,0,0,0.08)",
         background: theme.colors.bg.surface.primary,
-        color: theme.colors.text.brand.primary,    
+        color: theme.colors.text.primary,    
       }}
     >
       {children}

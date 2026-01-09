@@ -104,7 +104,7 @@ export const Calendar = ({
       >
         <span
           style={{
-            color: textColor || theme.colors.text.brand.primary,
+            color: textColor || theme.colors.text.primary,
             fontWeight: 700,
             fontSize: headerFontSize,
           }}
@@ -120,7 +120,7 @@ export const Calendar = ({
               <ArrowBackward
                 width={iconSize}
                 height={iconSize}
-                color={iconColor || theme.colors.text.primary}
+                color={iconColor || theme.colors.text.subtle}
               />
             </div>
           </div>
@@ -132,7 +132,7 @@ export const Calendar = ({
               <ArrowForward
                 width={iconSize}
                 height={iconSize}
-                color={iconColor || theme.colors.text.primary}
+                color={iconColor || theme.colors.text.subtle}
               />
             </div>
           </div>
@@ -187,7 +187,7 @@ export const Calendar = ({
             ? selectedTextColor || theme.colors.text.onPrimary
             : isSunday
             ? holidayTextColor || theme.colors.status.error.subtle
-            : textColor || theme.colors.text.primary;
+            : textColor || theme.colors.text.subtle;
 
           return (
             <div

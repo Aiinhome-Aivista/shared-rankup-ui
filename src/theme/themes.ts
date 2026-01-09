@@ -4,7 +4,7 @@ import { palette } from "./colors";
 export const lightTheme: Theme = {
   colors: {
     bg: {
-      primary: palette.common.white,
+      primary: palette.common.white, 
       secondary: palette.neutral[50], // Generic secondary bg
       sidebar: palette.common.blue_primary,
       surface: {
@@ -17,12 +17,12 @@ export const lightTheme: Theme = {
       },
     },
     text: {
-      primary: palette.purple[300], // primary text
+      primary: palette.common.blue_primary, // was brand.primary
       secondary: palette.common.blue_tertiary, // muted
+      subtle: palette.purple[300], // was primary
       inverse: palette.purple[400],
       onPrimary: palette.common.white,
       brand: {
-        primary: palette.common.blue_primary, // default text was blue_primary
         secondary: palette.purple[500], // sidebaricontext
       },
     },
@@ -91,12 +91,12 @@ export const darkTheme: Theme = {
       },
     },
     text: {
-      primary: palette.common.white,
+      primary: palette.common.white, // was brand.primary
       secondary: palette.green[500],
+      subtle: palette.common.white, // was primary
       inverse: palette.common.white,
       onPrimary: palette.common.green,
       brand: {
-        primary: palette.common.white, // default
         secondary: palette.neutral[300], // sidebaricontext
       },
     },

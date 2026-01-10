@@ -88,6 +88,8 @@ export const darkTheme: Theme = {
   colors: {
     bg: {
       primary: palette.common.green,
+      primaryDimmed: palette.common.green,
+      primaryDimmed25: palette.common.green,
       secondary: palette.common.green, // Adjust if needed
       sidebar: palette.green[900],
       button: {
@@ -101,6 +103,7 @@ export const darkTheme: Theme = {
         brand: palette.green[900], // aiassistance
         brandSecondary: palette.green[900], // announcement
         neutral: palette.green[900], // calendernormaltextBg
+        warning: palette.green[800],
       },
     },
     text: {
@@ -108,6 +111,7 @@ export const darkTheme: Theme = {
       secondary: palette.green[500],
       subtle: palette.common.white, // was primary
       inverse: palette.common.white,
+      inverseSecondary: palette.common.white,
       onPrimary: palette.common.green,
       tertiary: palette.common.green_primary,
       brand: {

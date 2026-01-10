@@ -95,7 +95,7 @@ export const darkTheme: Theme = {
         tertiary: palette.green[850], // notificationBg
       },
       surface: {
-        primary: palette.green[850], // card
+        primary: palette.green[750], // card
         secondary: palette.green[850], // upcomingSectionSmallCardBg (same as card in dark?)
         tertiary: palette.green[850], // notificationBg
         brand: palette.green[900], // aiassistance
